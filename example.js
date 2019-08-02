@@ -13,3 +13,6 @@ ws.on('close', function close() {
 ws.on('message', function incoming(data) {
   console.log(data);
 });
+
+ws.send({"method":"subscribeOrderbook","params":{"symbol":"XQRBTC"}});
+ws.send({"method":"subscribeOrderbook","params":{"symbol":"ODINBTC"}});
