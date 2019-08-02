@@ -14,11 +14,11 @@ ws.on('close', function close() {
 });
 
 ws.on('message', function incoming(data) {
-  console.log(data);
+  console.log(JSON.parse(data));
 });
 
 function doStuff()
 {
-  ws.send('{"method":"subscribeOrderbook","params":{"symbol":"XQRBTC"}}');
-  ws.send('{"method":"subscribeOrderbook","params":{"symbol":"ODINBTC"}}');
+  ws.send(JSON.stringify({"method":"subscribeOrderbook","params":{"symbol":"XQRBTC"}}));
+  ws.send(JSON.stringify({"method":"subscribeOrderbook","params":{"symbol":"ODINBTC"}}));
 }
