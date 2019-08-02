@@ -19,6 +19,6 @@ ws.on('message', function incoming(data) {
 
 function doStuff()
 {
-  ws.send({"method":"subscribeOrderbook","params":{"symbol":"XQRBTC"}});
-  ws.send({"method":"subscribeOrderbook","params":{"symbol":"ODINBTC"}});
+  ws.send('{"method":"subscribeOrderbook","params":{"symbol":"XQRBTC"}}');
+  ws.send('{"method":"subscribeOrderbook","params":{"symbol":"ODINBTC"}}');
 }
